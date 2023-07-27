@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Logout from './Logout';
 
 export default function CreatePortfolio(){
 
