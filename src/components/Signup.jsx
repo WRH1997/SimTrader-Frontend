@@ -19,7 +19,7 @@ export default function Signup(){
         }
 
         try{
-            let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/auth/signup', {
+            let data = await fetch(process.env.REACT_APP_API_GATEWAY+'/auth/signup', {
                 method: 'POST',
                 body: JSON.stringify({"username": username, "password": pwd, "name": name, "email": email})
             });

@@ -11,7 +11,7 @@ export default function Homepage(){
     React.useEffect(() => {
         const getPortfolios = async () => {
             let username = localStorage.user;
-            let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/portfolios/userportfolios', {
+            let data = await fetch(process.env.REACT_APP_API_GATEWAY+'/portfolios/userportfolios', {
                 method: 'POST',
                 body: JSON.stringify({"username": username})
             });

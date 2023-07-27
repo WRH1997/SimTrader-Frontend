@@ -10,7 +10,7 @@ export default function Login(){
         try{
             let username = document.getElementById('username').value;
             let pwd = document.getElementById('pwd').value;
-            let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/auth/login', {
+            let data = await fetch(process.env.REACT_APP_API_GATEWAY+'/auth/login', {
                 method: 'POST',
                 body: JSON.stringify({"username": username, "password": pwd})
             });

@@ -10,7 +10,7 @@ export default function CreatePortfolio(){
         try{
             let portName = document.getElementById('portName').value;
             let balance = document.getElementById('balance').value;
-            let data =  await fetch(env.process.REACT_APP_API_GATEWAY+'/portfolios/create', {
+            let data =  await fetch(process.env.REACT_APP_API_GATEWAY+'/portfolios/create', {
                 method: 'POST',
                 body: JSON.stringify({"username": user, "portfolioName": portName, "balance": balance})
             });
