@@ -38,7 +38,6 @@ export default function Homepage(){
 
     return(
         <div>
-            <Logout/>
             <input type='button' onClick={Create} value="Create Portfolio"></input>
 
             <div>
@@ -46,6 +45,7 @@ export default function Homepage(){
                 <li id={key} onClick={ViewPort}>{key}</li>
             ))}
             </div>
+            <Logout/>
         </div>
     )
 }

@@ -21,7 +21,7 @@ export default function Login(){
                 nav('/Homepage');
             }
             else{
-                alert("Error: Check Browser Console Logs");
+                alert(res['error']);
             }
         }
         catch(Exception){
