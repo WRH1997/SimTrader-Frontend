@@ -21,7 +21,7 @@ export default function PortfolioView(){
                 nav('/homepage');
             }
             let targetPort = localStorage.viewPort;
-            let data = await fetch('https://yhnrl7h7f8.execute-api.us-east-1.amazonaws.com/Test/portfolios/userportfolios', {
+            let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/portfolios/userportfolios', {
                 method: 'POST',
                 body: JSON.stringify({"username": username, "viewPort":targetPort})
             });
@@ -44,7 +44,7 @@ export default function PortfolioView(){
 
 
     const quoteTargetStock = async (stock) => {
-        let data = await fetch('https://yhnrl7h7f8.execute-api.us-east-1.amazonaws.com/Test/marketdata/stockquote', {
+        let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/marketdata/stockquote', {
             method: 'POST',
             body: JSON.stringify({"ticker": stock})
         });
@@ -66,7 +66,7 @@ export default function PortfolioView(){
         let quantity = 1
 
 
-        let data2 = await fetch('https://yhnrl7h7f8.execute-api.us-east-1.amazonaws.com/Test/portfolios/sell', {
+        let data2 = await fetch(env.process.REACT_APP_API_GATEWAY+'/portfolios/sell', {
             method: 'POST',
             body: JSON.stringify({
                 "username": username,

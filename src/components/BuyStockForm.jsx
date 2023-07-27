@@ -15,7 +15,7 @@ export default function BuyStockForm(props){
             return;
         }
 
-        let data = await fetch('https://yhnrl7h7f8.execute-api.us-east-1.amazonaws.com/Test/marketdata/tickersearch', {
+        let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/marketdata/tickersearch', {
             method: 'POST',
             body: JSON.stringify({"searchTerm": searchTerm})
         });
@@ -34,7 +34,7 @@ export default function BuyStockForm(props){
     const buyStock = async (label, quote) => {
         let quantity = document.getElementById('quantity').value;
         quote = Math.round(quote * 100) / 100;
-        let data = await fetch('https://yhnrl7h7f8.execute-api.us-east-1.amazonaws.com/Test/portfolios/buy', {
+        let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/portfolios/buy', {
             method: 'POST',
             body: JSON.stringify({
                 "username": props.username,
@@ -57,7 +57,7 @@ export default function BuyStockForm(props){
 
     const getStockQuote = async (event) => {
         event.preventDefault();
-        let data = await fetch('https://yhnrl7h7f8.execute-api.us-east-1.amazonaws.com/Test/marketdata/stockquote', {
+        let data = await fetch(env.process.REACT_APP_API_GATEWAY+'/marketdata/stockquote', {
             method: 'POST',
             body: JSON.stringify({"ticker": event.target.id})
         });
