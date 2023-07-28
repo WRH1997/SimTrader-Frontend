@@ -73,8 +73,8 @@ export default function BuyStockForm(props){
         let quoteDiv = <div className='quote-div'>
             <u>Stock:</u> <b><span id='stockLabel'>{label}</span></b>
             <br></br>
-            <u>Price:</u> <b><span id='stockQuote'>${quote}</span></b>
-            <br></br>
+            <u>Price Per Unit:</u> <b><span id='stockQuote'>${quote}</span></b>
+            <br></br><br></br>
             Quantity: <input type='number' id='quantity' defaultValue={1}></input>
             <br></br>
             <center>
