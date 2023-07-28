@@ -101,7 +101,7 @@ export default function BuyStockForm(props){
             <br></br>
             <input type='button' value='Search Ticker' onClick={searchTicker} className='sr-btn'></input>
             <br></br> 
-            {loading ? <div>Loading...</div> : null}
+            {loading ? <div>  Loading...</div> : null}
             <div id='options'>
                 {options?.map((option) => (
                     <div onClick={getStockQuote} id={option} className='buy-options'>
@@ -110,7 +110,7 @@ export default function BuyStockForm(props){
                 ))}
             </div>
             <br></br>
-            {loading2 ? <div>Loading...</div> : null}
+            {loading2 ? <div>  Loading...</div> : null}
             <div id='quote'>
                     {quote}
             </div>
