@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import './Style.css';
 
 
 export default function Login(){
@@ -10,7 +11,7 @@ export default function Login(){
         try{
             let username = document.getElementById('username').value;
             let pwd = document.getElementById('pwd').value;
-            let data = await fetch(process.env.REACT_APP_API_GATEWAY+'/auth/login', {
+            let data = await fetch(process.env.REACT_APP_API_GATEWAY + '/auth/login', {
                 method: 'POST',
                 body: JSON.stringify({"username": username, "password": pwd})
             });
@@ -21,6 +22,7 @@ export default function Login(){
                 nav('/Homepage');
             }
             else{
+                console.log(res);
                 alert(res['error']);
             }
         }
@@ -30,15 +32,19 @@ export default function Login(){
     }
 
     return(
-        <div>
+        <div className='login-div'>
             <center>
-                Username: <input type='text' id='username'></input>
+                <h1>Sim Trader</h1>
+                <i><h4>Stock Market Simulation (Paper Trading) Using Real-Time Market Data</h4></i>
+                Username: <input type='text' id='username' className='lgn-txt'></input>
                 <br></br><br></br>
-                Password: <input type='password' id='pwd'></input>
+                Password:  &nbsp;<input type='password' id='pwd' className='lgn-txt'></input>
                 <br></br><br></br>
-                <input type='button' value='Log In' onClick={VerifyUser}></input>
+                <input type='button' value='Log In' onClick={VerifyUser} className='login-btn'></input>
                 <hr></hr>
                 <br></br><br></br>
+                <i>Don't have an account?</i>
+                <br></br>
                 <a href='/signup'>Sign Up</a>
             </center>
         </div>

@@ -15,8 +15,11 @@ export default function Logout(){
 
     if(localStorage.getItem("user") !== null){
         return(
-            <div>
-                <input type='button' value='Logout' onClick={logUserOut} className='logout'></input>
+            <div className="logout">
+                <hr></hr>
+                <center>
+                    <input type='button' value='Logout' onClick={logUserOut} className='logout-btn'></input>
+                </center>
             </div>
         )
     }
