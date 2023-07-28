@@ -54,7 +54,7 @@ export default function Homepage(){
                         ))}
                     </div>
                     <br></br>
-                    <Popup trigger={<button className="create-btn"> Create Portfolio</button>} position="top center">
+                    <Popup trigger={<button className="create-btn"> Create Portfolio</button>} position="right center">
                         <CreatePortfolio />
                     </Popup>
                 </div>

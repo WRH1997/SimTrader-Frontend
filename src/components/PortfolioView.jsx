@@ -91,6 +91,7 @@ export default function PortfolioView(){
     return(
         <div className='port-view-div'>
             <center>
+                <br></br>
                 <h2><i>{localStorage.viewPort}</i> Portfolio</h2>
                 {Object.keys(portfolio || {})?.map((key, i) => (
                     <div className='single-port'>
