@@ -1,7 +1,14 @@
+html, body{
+    background: linear-gradient(110deg, #EDE4FF 70%, #D7BBF5 60%);
+    height: 100%;
+}
+
 .logout{
     width: 100%;
+    border-top: solid #D7BBF5 1px;
     position:absolute;
     bottom:0;
+    background-color: #FDEBED
 }
 
 .logout hr{
@@ -14,9 +21,8 @@
     margin-top: 2vh;
 }
 
-
 .port-view-div > .logout{
-    position: relative;
+    position: fixed;
     bottom: 0;
 }
 
@@ -30,8 +36,11 @@
 }
 
 .login-div hr{
-    margin-top: 4vh;
+    margin-top: 8vh;
     margin-bottom: -1.5vh;
+    border: grey solid 1px;
+    width: 70%;
+    opacity: 50%;
 }
 
 .login-div h1{
@@ -63,6 +72,7 @@
     border-radius: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: lightgrey;
 }
 
 .hmpg-port h2{
@@ -79,10 +89,11 @@
 
 .single-port{
     margin-bottom: 5vh;
-    border: solid black;
+    border: solid black 1px;
     border-radius: 25px;
     padding: 2vh;
     width: 30%;
+    background-color: lightgrey;
 }
 
 .sell-quant{
